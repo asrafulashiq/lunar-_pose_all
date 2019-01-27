@@ -1,5 +1,5 @@
 #%%
-from pathlib import Path
+from pathlib2 import Path
 import cv2
 from matplotlib import pyplot as plt
 import random
@@ -18,6 +18,12 @@ if not TEST_DEST.exists():
 #%%
 for vid_file in FLDR.iterdir():
     print "src: ", vid_file
+
+    # if vid_file.name != '10_17_T4_K1':
+    #     continue
+    # else:
+    #     print 'processing'
+
     allfiles = sorted(list(vid_file.iterdir()))
     num_sampled = 120
     train_sample = 100
